@@ -2,9 +2,36 @@
 
 <!DOCTYPE html>
 <html>
+
+
 <head>
 
+<?php
+$servername = "ip-172-31-49-162";
+$username = "hectorrshr";
+$password = "";
+$dbname = "ImageDb";
 
+if(isset($_REQUEST["submit"])){
+ $conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error)
+{
+ die("Connection failed: " . $conn->connect_error);
+}
+
+ $u_Name =  $_SESSION["userName"];
+ $u_highScore = $_COOKIE["counter"];
+ $sql = "INSERT INTO `userHighScore`(`userName`,`uHighScore`) VALUES('$u_Name', '$u_highScore')";
+ if (mysqli_query($conn, $sql)) {
+ echo '<p> You may now start a new game </p>' ;
+ }
+ else{
+  echo "Error: " . $sql . "<br>" . $conn->error;
+  ;}
+$conn->close();
+}
+ 
+?>
 
 <title>Prologue by HTML5 UP</title>
 <meta charset="utf-8" />
@@ -235,7 +262,7 @@ body {
       <span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
       <input type="text" class="form-control input-lg" disabled placeholder="Upload Image">
       <span class="input-group-btn">
-        <button class="browse btn btn-primary input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Send</button>
+        <button class="browse btn btn-primary input-lg" type="submit"><i class="glyphicon glyphicon-search"></i> Send</button>
       </span>
     </div>
   </div>
@@ -315,4 +342,4 @@ body {
       <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
       <script src="assets/js/main.js"></script>
 </body>
-</html>
+</html>po
