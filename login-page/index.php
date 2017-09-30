@@ -9,7 +9,7 @@
 <?php
   $servername = "ip-172-31-49-162";
   $username = "hectorrshr";
-  $password = "";
+  $password = "Superior11";
   $dbname = "userDb";
 
   if(isset($_REQUEST["submit"])){
