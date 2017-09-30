@@ -8,7 +8,7 @@
 
 <?php
   $servername = "ip-172-31-49-162";
-  $username = "";
+  $username = "hectorrshr";
   $password = "";
   $dbname = "userDb";
 
