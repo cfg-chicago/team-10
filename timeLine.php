@@ -13,6 +13,7 @@ $password = "";
 $dbname = "ImageDb";
 
 if(isset($_REQUEST["submit"])){
+ echo "submit trigged";
  $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error)
 {
