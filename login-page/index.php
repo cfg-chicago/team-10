@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE HTML>
 <!--
 	Prologue by HTML5 UP
@@ -11,10 +7,10 @@ session_start();
 <html>
 
 <?php
-  $servername = "localhost";
-  $username = "W01184547";
-  $password = "Victoriacs!";a
-  $dbname = "W01184547";
+  $servername = "ip-172-31-49-162";
+  $username = "force";
+  $password = "";
+  $dbname = "userDb";
 
   if(isset($_REQUEST["submit"])){
    $conn = new mysqli($servername, $username, $password, $dbname);
@@ -23,7 +19,6 @@ session_start();
    die("Connection failed: " . $conn->connect_error);
   }
    $u_Name = $_POST['UserName'];
-   $_SESSION["userName"] = $u_Name;
    $u_Password = $_POST['Password'];
    $u_final = $u_Name . ':' . $u_Password;
    $u_Hash = password_hash($u_final, PASSWORD_DEFAULT);
@@ -251,7 +246,7 @@ session_start();
 
 							<div id="id01" class="modal">
 
-							  <form class="modal-content animate" action="/action_page.php">
+							  <form class="modal-content animate" >
 							    <div class="imgcontainer">
 							      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 							      <h3> <b>Login as a Mentor</b> </h3>
