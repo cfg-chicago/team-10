@@ -23,16 +23,16 @@
    $u_final = $u_Name . ':' . $u_Password;
    $u_Hash = password_hash($u_final, PASSWORD_DEFAULT);
    $u_dbPass = "";
-   $sql = "SELECT `Password` FROM `userLogin` WHERE userName='$u_Name'";
+   $sql = "SELECT `Password` FROM `userLogin` WHERE username='$u_Name'";
    $result = $conn->query($sql);
   if($result->num_rows > 0){
    while($row= $result->fetch_assoc())
    {
-     $u_dbPass =$row["Password"];
+     $u_dbPass =$row["password"];
    }
   }
   if (password_verify($u_final, $u_dbPass)){
-   header('Location: http://icarus.cs.weber.edu/~va84547/userGame.php');
+   header('Location: http://54.165.174.97/team-10/studentportfolios/index.html');
   }
   else {
    echo 'invalid password.';
