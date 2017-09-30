@@ -263,7 +263,7 @@ body {
       <input type="text" class="form-control input-lg" disabled placeholder="Upload Image">
       <span class="input-group-btn">
       
-        <input class="browse btn btn-primary input-lg" name="submit" type="submit"><i class="glyphicon glyphicon-search"></i> Send</input>
+        <input class="browse btn btn-primary input-lg" name="submit" type="submit"><i class="glyphicon glyphicon-search"></i></input>
       </span>
     </div>
   </div>
