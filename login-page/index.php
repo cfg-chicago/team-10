@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE HTML>
 <!--
 	Prologue by HTML5 UP
