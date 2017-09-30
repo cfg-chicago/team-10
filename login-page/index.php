@@ -19,7 +19,6 @@
    die("Connection failed: " . $conn->connect_error);
   }
    $u_Name = $_POST['UserName'];
-   $_SESSION["userName"] = $u_Name;
    $u_Password = $_POST['Password'];
    $u_final = $u_Name . ':' . $u_Password;
    $u_Hash = password_hash($u_final, PASSWORD_DEFAULT);
