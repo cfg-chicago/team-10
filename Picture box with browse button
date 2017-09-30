@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<style>
+h2 {
+    padding: 0px;
+    font-size: 45px;
+}
+div.desc {
+    padding: 30px;
+    width: 400px;
+    text-align: center;
+    font-size: 20px;
+}
+</style>
+</head>
+<body>
+    <h2 align = "center">Sample Student</h2>
+
+    <center> <img src="4thgrader.jpeg" alt="4th Grader" width="400" height="400" align="middle"> </center>
+
+  <center> <div class="desc"> Hi! My name is Sample Student. I am a 4th grader at Lawndale Elementary School. This is my first year as a part of Pitch In and I absolutely love it! My favorite mentor is Kerry Wood. </div> </center>
+  <h1>Bootstrap Styled Browse Button</h1>
+<h4>styled file browse button for bootstrap v3.5+</h4>
+<div class="container">
+  
+  <div class="form-group">
+    <input type="file" name="img[]" class="file">
+    <div class="input-group col-xs-12">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
+      <input type="text" class="form-control input-lg" disabled placeholder="Upload Image">
+      <span class="input-group-btn">
+        <button class="browse btn btn-primary input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button>
+      </span>
+    </div>
+  </div>
+  <div class="form-group">
+    <input type="file" name="img[]" class="file">
+    <div class="input-group col-xs-12">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
+      <input type="text" class="form-control input-lg" disabled placeholder="Upload Image">
+      <span class="input-group-btn">
+        <button class="browse btn btn-primary input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button>
+      </span>
+    </div>
+  </div>
+  <div class="form-group">
+    <input type="file" name="img[]" class="file">
+    <div class="input-group col-xs-12">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
+      <input type="text" class="form-control input-lg" disabled placeholder="Upload Image">
+      <span class="input-group-btn">
+        <button class="browse btn btn-primary input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button>
+      </span>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
