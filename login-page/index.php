@@ -9,6 +9,43 @@ session_start();
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+
+<?php
+  $servername = "localhost";
+  $username = "W01184547";
+  $password = "Victoriacs!";a
+  $dbname = "W01184547";
+
+  if(isset($_REQUEST["submit"])){
+   $conn = new mysqli($servername, $username, $password, $dbname);
+  if ($conn->connect_error)
+  {
+   die("Connection failed: " . $conn->connect_error);
+  }
+   $u_Name = $_POST['UserName'];
+   $_SESSION["userName"] = $u_Name;
+   $u_Password = $_POST['Password'];
+   $u_final = $u_Name . ':' . $u_Password;
+   $u_Hash = password_hash($u_final, PASSWORD_DEFAULT);
+   $u_dbPass = "";
+   $sql = "SELECT `Password` FROM `userTable` WHERE userName='$u_Name'";
+   $result = $conn->query($sql);
+  if($result->num_rows > 0){
+   while($row= $result->fetch_assoc())
+   {
+     $u_dbPass =$row["Password"];
+   }
+  }
+  if (password_verify($u_final, $u_dbPass)){
+   header('Location: http://icarus.cs.weber.edu/~va84547/userGame.php');
+  }
+  else {
+   echo 'invalid password.';
+  }
+  $conn->close();
+  }
+?>
+
 	<head>
 		<title>Pitch In</title>
 		<meta charset="utf-8" />
@@ -221,13 +258,16 @@ session_start();
 							    </div>
 
 							    <div class="container">
-							      <label><b>Username</b></label>
-							      <input type="text" placeholder="Enter Username" name="uname" required>
 
-							      <label><b>Password</b></label>
-							      <input type="password" placeholder="Enter Password" name="psw" required>
+                    <form id="userForm" method="post">
+                      <label><b> UserName: <input type="text" placeholder="Enter Username" name="UserName" id="uName"> </b></label>
+                      <label><b> Password: <input type="password" name="Password" placeholder="Enter Password" id="uPass"></label>
 
-							      <button type="submit">Login</button>
+                       <input type="submit" name="submit" value="LOGIN"/>
+                     </form>
+
+
+							      <!-- <button type="submit">Login</button> -->
 							      <input type="checkbox" checked="checked"> <b>Remember me</b>
 							    </div>
 
