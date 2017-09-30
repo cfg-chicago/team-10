@@ -7,9 +7,9 @@
 <html>
 
 <?php
-  $servername = "ip-172-31-49-162";
-  $username = "hectorrshr";
-  $password = "Superior11";
+  $servername = "54.165.174.97";
+  $username = "root";
+  $password = "";
   $dbname = "userDb";
 
   if(isset($_REQUEST["submit"])){
