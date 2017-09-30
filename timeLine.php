@@ -262,7 +262,7 @@ body {
       <span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
       <input type="text" class="form-control input-lg" disabled placeholder="Upload Image">
       <span class="input-group-btn">
-        <button class="browse btn btn-primary input-lg" type="submit"><i class="glyphicon glyphicon-search"></i> Send</button>
+        <button class="browse btn btn-primary input-lg" name="submit" type="submit"><i class="glyphicon glyphicon-search"></i> Send</button>
       </span>
     </div>
   </div>
