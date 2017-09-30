@@ -3,13 +3,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+h2 {
+    padding: 0px;
+    font-size: 45px;
+}
+div.desc {
+    padding: 30px;
+    width: 400px;
+    text-align: center;
+    font-size: 20px;
+}
+</style>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 * {
     box-sizing: border-box;
 }
+
+head {
+    background-color: white;
+    font-family: Helvetica, sans-serif;
+}
 body {
-    background-color: #474e5d;
+    background-color: #FDF3E7;
     font-family: Helvetica, sans-serif;
 }
 
@@ -18,8 +36,10 @@ body {
     left: 46%;
     height: 100px;
     width: 100px;
+    bottom: 0;
     top: 50%;
     z-index: 2;
+
 
 }
 
@@ -166,12 +186,36 @@ body {
   }
 }
 </style>
+
+   <h2 align = "center">Sample Student</h2>
+
+    <center> <img src="4thgrader.jpeg" alt="4th Grader" width="400" height="400" align="middle"> </center>
+
+  <center> <div class="desc"> Hi! My name is Sample Student. I am a 4th grader at Lawndale Elementary School. This is my first year as a part of Pitch In and I absolutely love it! My favorite mentor is Kerry Wood. </div> </center>
+
+<center>
+<div class="container">
+
+  <div class="form-group">
+    <input type="file" name="img[]" class="file">
+    <div class="input-group col-xs-12">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
+      <input type="text" class="form-control input-lg" disabled placeholder="Upload Image">
+      <span class="input-group-btn">
+        <button class="browse btn btn-primary input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Send</button>
+      </span>
+    </div>
+  </div>
+  </center>
+
+</div>
 </head>
 <body>
 
-<center><image src="pics/dragon.svg" height="95" width="269" class="fixed" /></center>
-<div class="timeline">
 
+
+<div class="timeline">
+<center><image src="pics/dragon.svg" height="95" width="269" class="fixed" /></center>
 <div class="streetlines a"></div>
 <div class="streetlines b"></div>
   <div class="container left">
