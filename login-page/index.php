@@ -10,7 +10,7 @@
   $servername = "ip-172-31-49-162";
   $username = "force";
   $password = "";
-  $dbname = "ImageDb";
+  $dbname = "userDb";
 
   if(isset($_REQUEST["submit"])){
    $conn = new mysqli($servername, $username, $password, $dbname);
@@ -246,7 +246,7 @@
 
 							<div id="id01" class="modal">
 
-							  <form class="modal-content animate" action="/action_page.php">
+							  <form class="modal-content animate" >
 							    <div class="imgcontainer">
 							      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 							      <h3> <b>Login as a Mentor</b> </h3>
