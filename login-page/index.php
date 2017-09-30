@@ -8,9 +8,9 @@
 
 <?php
   $servername = "ip-172-31-49-162";
-  $username = "force";
+  $username = "";
   $password = "";
-  $dbname = "ImageDb";
+  $dbname = "userDb";
 
   if(isset($_REQUEST["submit"])){
    $conn = new mysqli($servername, $username, $password, $dbname);
@@ -23,7 +23,7 @@
    $u_final = $u_Name . ':' . $u_Password;
    $u_Hash = password_hash($u_final, PASSWORD_DEFAULT);
    $u_dbPass = "";
-   $sql = "SELECT `Password` FROM `userTable` WHERE userName='$u_Name'";
+   $sql = "SELECT `Password` FROM `userLogin` WHERE userName='$u_Name'";
    $result = $conn->query($sql);
   if($result->num_rows > 0){
    while($row= $result->fetch_assoc())
@@ -248,7 +248,7 @@
 
 							<div id="id01" class="modal">
 
-							  <form class="modal-content animate" action="/action_page.php">
+							  <form class="modal-content animate" >
 							    <div class="imgcontainer">
 							      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 							      <h3> <b>Login as a Mentor</b> </h3>
