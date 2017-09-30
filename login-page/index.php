@@ -23,7 +23,7 @@
    $u_final = $u_Name . ':' . $u_Password;
    $u_Hash = password_hash($u_final, PASSWORD_DEFAULT);
    $u_dbPass = "";
-   $sql = "SELECT `Password` FROM `userTable` WHERE userName='$u_Name'";
+   $sql = "SELECT `Password` FROM `userLogin` WHERE userName='$u_Name'";
    $result = $conn->query($sql);
   if($result->num_rows > 0){
    while($row= $result->fetch_assoc())
