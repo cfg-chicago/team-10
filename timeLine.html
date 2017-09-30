@@ -6,32 +6,6 @@
 
 <head>
 
-<?php
-$servername = "ip-172-31-49-162";
-$username = "hectorrshr";
-$password = "";
-$dbname = "ImageDb";
-
-if(isset($_REQUEST["submit"])){
- $conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error)
-{
- die("Connection failed: " . $conn->connect_error);
-}
-
- $u_Name =  $_SESSION["userName"];
- $u_highScore = $_COOKIE["counter"];
- $sql = "INSERT INTO `userHighScore`(`userName`,`uHighScore`) VALUES('$u_Name', '$u_highScore')";
- if (mysqli_query($conn, $sql)) {
- echo '<p> You may now start a new game </p>' ;
- }
- else{
-  echo "Error: " . $sql . "<br>" . $conn->error;
-  ;}
-$conn->close();
-}
- 
-?>
 
 <title>Prologue by HTML5 UP</title>
 <meta charset="utf-8" />
@@ -70,7 +44,16 @@ body {
     top:0%;
     right: 0%;
     background-color: inherit;
-    width: 30%;   
+    width: 30%;
+  }
+
+  .achievement_button {
+    padding: 10px 40px;
+    position: absolute;
+    top: 15%;
+    right: 0%;
+    background-color: inherit;
+    width: 30%;
   }
 
   .fixed{
@@ -79,7 +62,7 @@ body {
     height: 100px;
     width: 100px;
     bottom: 0;
-    top: 69%;
+    top: 80%;
     z-index: 2;
 
 
@@ -179,14 +162,14 @@ body {
   .timeline::after {
     left: 31px;
   }
-  
+
   /* Full-width containers */
   .container {
     width: 100%;
     padding-left: 10px;
     padding-right: 10px;
   }
-  
+
   /* Make sure that all arrows are pointing leftwards */
   .container::before {
     left: 60px;
@@ -198,11 +181,50 @@ body {
   .left::after, .right::after {
     left: 15px;
   }
-  
+
   /* Make all right containers behave like the left ones */
   .right {
     left: 0%;
   }
+}
+.dropbtn {
+    background-color: #bdbdbd;
+    color: white;
+    padding: 25px 80px;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 30px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #00ced6;
 }
 </style>
 
@@ -267,9 +289,19 @@ body {
       </span>
     </div>
   </div>
-
-
 </div>
+<div class="achievement_button">
+
+  <div class ="dropdown">
+    <button class="dropbtn">Achievements</button>
+    <div class="dropdown-content">
+      <a href="#">Post 3 weeks in a row!</a>
+      <a href="#">Be on time to class</a>
+      <a href="#">Don't skip class for 3 weeks</a>
+    </div>
+  </div>
+</div>
+
 </head>
 <body>
 
