@@ -11,10 +11,10 @@ session_start();
 <html>
 
 <?php
-  $servername = "localhost";
-  $username = "W01184547";
-  $password = "Victoriacs!";a
-  $dbname = "W01184547";
+  $servername = "ip-172-31-49-162";
+  $username = "force";
+  $password = "";
+  $dbname = "ImageDb";
 
   if(isset($_REQUEST["submit"])){
    $conn = new mysqli($servername, $username, $password, $dbname);
