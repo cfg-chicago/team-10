@@ -241,7 +241,9 @@
 								</button>
 
 
-								<a href="http://www.wffpitchin.org/pitch-in-program/" class="button scrolly">Login as a Student</a>
+                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">
+									Login as a Student
+								</button>
 							</footer>
 
 							<div id="id01" class="modal">
