@@ -7,7 +7,7 @@
 <html>
 
 <?php
-  $servername = "54.165.174.97";
+  $servername = "127.0.0.1";
   $username = "root";
   $password = "";
   $dbname = "userDb";
