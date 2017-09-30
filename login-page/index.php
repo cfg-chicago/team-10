@@ -260,10 +260,10 @@
                       <label><b> UserName: <input type="text" placeholder="Enter Username" name="UserName" id="uName"> </b></label>
                       <label><b> Password: <input type="password" name="Password" placeholder="Enter Password" id="uPass"></label>
 
-                       <input type="submit" name="submit" value="LOGIN"/>
+                       
                      </form>
 
-
+<input type="submit" name="submit" value="LOGIN"/>
 							      <!-- <button type="submit">Login</button> -->
 							      <input type="checkbox" checked="checked"> <b>Remember me</b>
 							    </div>
