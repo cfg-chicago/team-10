@@ -251,7 +251,7 @@
 							  <form class="modal-content animate" >
 							    <div class="imgcontainer">
 							      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-							      <h3> <b>Login as a Mentor</b> </h3>
+							      <h3> <b>Login</b> </h3>
 							    </div>
 
 							    <div class="container">
